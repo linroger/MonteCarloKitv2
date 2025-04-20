@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A75210D82DB47DA500C9749B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75210BF2DB47DA400C9749B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75210C62DB47DA400C9749B;
+			remoteInfo = MonteCarloKitv2;
+		};
+		A75210E22DB47DA500C9749B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75210BF2DB47DA400C9749B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75210C62DB47DA400C9749B;
+			remoteInfo = MonteCarloKitv2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A75210C72DB47DA400C9749B /* MonteCarloKitv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonteCarloKitv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75210D72DB47DA500C9749B /* MonteCarloKitv2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonteCarloKitv2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75210E12DB47DA500C9749B /* MonteCarloKitv2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonteCarloKitv2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A75210C92DB47DA400C9749B /* MonteCarloKitv2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonteCarloKitv2;
+			sourceTree = "<group>";
+		};
+		A75210DA2DB47DA500C9749B /* MonteCarloKitv2Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonteCarloKitv2Tests;
+			sourceTree = "<group>";
+		};
+		A75210E42DB47DA500C9749B /* MonteCarloKitv2UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonteCarloKitv2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A75210C42DB47DA400C9749B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210D42DB47DA500C9749B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210DE2DB47DA500C9749B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A75210BE2DB47DA400C9749B = {
+			isa = PBXGroup;
+			children = (
+				A75210C92DB47DA400C9749B /* MonteCarloKitv2 */,
+				A75210DA2DB47DA500C9749B /* MonteCarloKitv2Tests */,
+				A75210E42DB47DA500C9749B /* MonteCarloKitv2UITests */,
+				A75210C82DB47DA400C9749B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A75210C82DB47DA400C9749B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A75210C72DB47DA400C9749B /* MonteCarloKitv2.app */,
+				A75210D72DB47DA500C9749B /* MonteCarloKitv2Tests.xctest */,
+				A75210E12DB47DA500C9749B /* MonteCarloKitv2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A75210C62DB47DA400C9749B /* MonteCarloKitv2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75210EB2DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2" */;
+			buildPhases = (
+				A75210C32DB47DA400C9749B /* Sources */,
+				A75210C42DB47DA400C9749B /* Frameworks */,
+				A75210C52DB47DA400C9749B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A75210C92DB47DA400C9749B /* MonteCarloKitv2 */,
+			);
+			name = MonteCarloKitv2;
+			packageProductDependencies = (
+			);
+			productName = MonteCarloKitv2;
+			productReference = A75210C72DB47DA400C9749B /* MonteCarloKitv2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A75210D62DB47DA500C9749B /* MonteCarloKitv2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75210EE2DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2Tests" */;
+			buildPhases = (
+				A75210D32DB47DA500C9749B /* Sources */,
+				A75210D42DB47DA500C9749B /* Frameworks */,
+				A75210D52DB47DA500C9749B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75210D92DB47DA500C9749B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A75210DA2DB47DA500C9749B /* MonteCarloKitv2Tests */,
+			);
+			name = MonteCarloKitv2Tests;
+			packageProductDependencies = (
+			);
+			productName = MonteCarloKitv2Tests;
+			productReference = A75210D72DB47DA500C9749B /* MonteCarloKitv2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A75210E02DB47DA500C9749B /* MonteCarloKitv2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75210F12DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2UITests" */;
+			buildPhases = (
+				A75210DD2DB47DA500C9749B /* Sources */,
+				A75210DE2DB47DA500C9749B /* Frameworks */,
+				A75210DF2DB47DA500C9749B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75210E32DB47DA500C9749B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A75210E42DB47DA500C9749B /* MonteCarloKitv2UITests */,
+			);
+			name = MonteCarloKitv2UITests;
+			packageProductDependencies = (
+			);
+			productName = MonteCarloKitv2UITests;
+			productReference = A75210E12DB47DA500C9749B /* MonteCarloKitv2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A75210BF2DB47DA400C9749B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A75210C62DB47DA400C9749B = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A75210D62DB47DA500C9749B = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A75210C62DB47DA400C9749B;
+					};
+					A75210E02DB47DA500C9749B = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A75210C62DB47DA400C9749B;
+					};
+				};
+			};
+			buildConfigurationList = A75210C22DB47DA400C9749B /* Build configuration list for PBXProject "MonteCarloKitv2" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A75210BE2DB47DA400C9749B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A75210C82DB47DA400C9749B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A75210C62DB47DA400C9749B /* MonteCarloKitv2 */,
+				A75210D62DB47DA500C9749B /* MonteCarloKitv2Tests */,
+				A75210E02DB47DA500C9749B /* MonteCarloKitv2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A75210C52DB47DA400C9749B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210D52DB47DA500C9749B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210DF2DB47DA500C9749B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A75210C32DB47DA400C9749B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210D32DB47DA500C9749B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75210DD2DB47DA500C9749B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A75210D92DB47DA500C9749B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75210C62DB47DA400C9749B /* MonteCarloKitv2 */;
+			targetProxy = A75210D82DB47DA500C9749B /* PBXContainerItemProxy */;
+		};
+		A75210E32DB47DA500C9749B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75210C62DB47DA400C9749B /* MonteCarloKitv2 */;
+			targetProxy = A75210E22DB47DA500C9749B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A75210E92DB47DA500C9749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A75210EA2DB47DA500C9749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A75210EC2DB47DA500C9749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MonteCarloKitv2/MonteCarloKitv2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A75210ED2DB47DA500C9749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MonteCarloKitv2/MonteCarloKitv2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A75210EF2DB47DA500C9749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonteCarloKitv2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonteCarloKitv2";
+			};
+			name = Debug;
+		};
+		A75210F02DB47DA500C9749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonteCarloKitv2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonteCarloKitv2";
+			};
+			name = Release;
+		};
+		A75210F22DB47DA500C9749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MonteCarloKitv2;
+			};
+			name = Debug;
+		};
+		A75210F32DB47DA500C9749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8AD8YC886;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linroger022.MonteCarloKitv2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MonteCarloKitv2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A75210C22DB47DA400C9749B /* Build configuration list for PBXProject "MonteCarloKitv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75210E92DB47DA500C9749B /* Debug */,
+				A75210EA2DB47DA500C9749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75210EB2DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75210EC2DB47DA500C9749B /* Debug */,
+				A75210ED2DB47DA500C9749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75210EE2DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75210EF2DB47DA500C9749B /* Debug */,
+				A75210F02DB47DA500C9749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75210F12DB47DA500C9749B /* Build configuration list for PBXNativeTarget "MonteCarloKitv2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75210F22DB47DA500C9749B /* Debug */,
+				A75210F32DB47DA500C9749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A75210BF2DB47DA400C9749B /* Project object */;
+}
