@@ -26,18 +26,24 @@ final class PythonBridge {
     private init() throws {
         let sys = Python.import("sys")
         // Compute path to 'python' directory relative to this Swift file
+        // Determine path to the 'python' folder at the repository root
         let sourceFileURL = URL(fileURLWithPath: #file)
         let swiftFileDir = sourceFileURL.deletingLastPathComponent()
-        // swiftFileDir is .../<ProjectRoot>/MonteCarloKitv2
-        let projectRoot = swiftFileDir.deletingLastPathComponent()
-        let pythonDir = projectRoot.appendingPathComponent("python").path
+        // swiftFileDir is .../<repo>/MonteCarloKitv2
+        let repoRoot = swiftFileDir.deletingLastPathComponent()
+        // repoRoot is .../<repo>
+        let pythonDir = repoRoot.appendingPathComponent("python").path
         // Prepend to Python sys.path
         sys.path.insert(0, PythonObject(pythonDir))
-        // Import simulation module
-        guard let simModule = try? Python.import("simulation") else {
-            throw PythonBridgeError.moduleImportFailed("simulation")
+        // Import simulation module (fallback to None on failure)
+        let simMod: PythonObject
+        do {
+            simMod = try Python.import("simulation")
+        } catch {
+            print("Warning: failed to import Python module 'simulation': \(error)")
+            simMod = Python.None
         }
-        simulation = simModule
+        simulation = simMod
     }
 
     /// Run the Monte Carlo simulation via Python
@@ -47,6 +53,10 @@ final class PythonBridge {
     ///       May be a Swift Double (normal std) or a Dictionary for other models
     /// - Returns: SimulationResult containing raw values and all computed metrics
     func runSimulation(nRuns: Int, parameter: Any) async throws -> SimulationResult {
+        // If Python module not available, return empty result
+        if simulation == Python.None {
+            return SimulationResult(values: [], metrics: [:])
+        }
         // Call Python function with bridged parameter
         let result = simulation.run_simulation(nRuns, parameter)
         let df = result[0]
