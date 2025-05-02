@@ -1,7 +1,9 @@
 import Foundation
+#if canImport(PythonKit)
 import PythonKit
 
 /// Errors thrown by PythonBridge
+/// Errors thrown by PythonBridge when PythonKit is available
 enum PythonBridgeError: Error {
     /// Failed to import the specified Python module
     case moduleImportFailed(String)
@@ -74,3 +76,19 @@ final class PythonBridge {
         return SimulationResult(values: values, metrics: metrics)
     }
 }
+#else
+/// Stub errors when PythonKit is unavailable
+enum PythonBridgeError: Error {
+    /// PythonKit not available
+    case noPythonKit
+}
+
+/// Dummy bridge that returns empty results
+final class PythonBridge {
+    static let shared = PythonBridge()
+    private init() {}
+    func runSimulation(nRuns: Int, parameter: Any) async throws -> SimulationResult {
+        return SimulationResult(values: [], metrics: [:])
+    }
+}
+#endif

@@ -14,7 +14,8 @@ struct SimulationView: View {
                         Text(model.displayName).tag(model)
                     }
                 }
-                .pickerStyle(.segmented)
+                // Use macOS pop-up button style for many model types
+                .pickerStyle(PopUpButtonPickerStyle())
                 .padding(.horizontal)
 
                 Form {
@@ -69,6 +70,8 @@ struct SimulationView: View {
                                     Text(String(format: "%.2f", viewModel.poissonT))
                                 }
                             }
+                        default:
+                            Text("Parameters for \(viewModel.modelType.displayName) coming soon.")
                         }
                     }
                 }
