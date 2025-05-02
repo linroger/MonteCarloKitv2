@@ -1,9 +1,15 @@
 import Foundation
+
+private let _pythonEnvSetup: Void = {
+    setenv("PYTHON_LIBRARY", "/Library/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib", 1)
+    setenv("PYTHON_LOADER_LOGGING", "TRUE", 1)
+    return ()
+}()
+
 #if canImport(PythonKit)
 import PythonKit
 
 /// Errors thrown by PythonBridge
-/// Errors thrown by PythonBridge when PythonKit is available
 enum PythonBridgeError: Error {
     /// Failed to import the specified Python module
     case moduleImportFailed(String)
@@ -34,9 +40,7 @@ final class PythonBridge {
         // Prepend to Python sys.path
         sys.path.insert(0, PythonObject(pythonDir))
         // Import simulation module
-        guard let simModule = try? Python.import("simulation") else {
-            throw PythonBridgeError.moduleImportFailed("simulation")
-        }
+        let simModule = Python.import("simulation")
         simulation = simModule
     }
 
@@ -46,7 +50,7 @@ final class PythonBridge {
     ///   - parameter: Configuration for the simulation
     ///       May be a Swift Double (normal std) or a Dictionary for other models
     /// - Returns: SimulationResult containing raw values and all computed metrics
-    func runSimulation(nRuns: Int, parameter: Any) async throws -> SimulationResult {
+    func runSimulation(nRuns: Int, parameter: PythonObject) async throws -> SimulationResult {
         // Call Python function with bridged parameter
         let result = simulation.run_simulation(nRuns, parameter)
         let df = result[0]

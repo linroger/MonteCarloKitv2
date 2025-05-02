@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A72440672DC469D900B486A3 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = A72440662DC469D900B486A3 /* PythonKit */; };
+		A724406A2DC469ED00B486A3 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = A72440692DC469ED00B486A3 /* MarkdownUI */; };
+		A724406D2DC46A0B00B486A3 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = A724406C2DC46A0B00B486A3 /* Algorithms */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A75210D82DB47DA500C9749B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A724406D2DC46A0B00B486A3 /* Algorithms in Frameworks */,
+				A72440672DC469D900B486A3 /* PythonKit in Frameworks */,
+				A724406A2DC469ED00B486A3 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = MonteCarloKitv2;
 			packageProductDependencies = (
+				A72440662DC469D900B486A3 /* PythonKit */,
+				A72440692DC469ED00B486A3 /* MarkdownUI */,
+				A724406C2DC46A0B00B486A3 /* Algorithms */,
 			);
 			productName = MonteCarloKitv2;
 			productReference = A75210C72DB47DA400C9749B /* MonteCarloKitv2.app */;
@@ -195,6 +207,11 @@
 			);
 			mainGroup = A75210BE2DB47DA400C9749B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A72440652DC469D900B486A3 /* XCRemoteSwiftPackageReference "PythonKit" */,
+				A72440682DC469ED00B486A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				A724406B2DC46A0B00B486A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A75210C82DB47DA400C9749B /* Products */;
 			projectDirPath = "";
@@ -399,7 +416,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X8AD8YC886;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -427,7 +444,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X8AD8YC886;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -553,6 +570,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A72440652DC469D900B486A3 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A72440682DC469ED00B486A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		A724406B2DC46A0B00B486A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A72440662DC469D900B486A3 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A72440652DC469D900B486A3 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+		A72440692DC469ED00B486A3 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A72440682DC469ED00B486A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		A724406C2DC46A0B00B486A3 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A724406B2DC46A0B00B486A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A75210BF2DB47DA400C9749B /* Project object */;
 }

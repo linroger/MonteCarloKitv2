@@ -91,7 +91,7 @@ def run_simulation(n_runs, parameter):
     else:
         # Existing simple models and catch-all
         if model_type not in ['normal', 'gbm', 'poisson']:
-            raise ValueError(f"Unknown model type: {model_type}")
+        raise ValueError(f"Unknown model type: {model_type}")
         # Fallback to original handlers for GBM and Poisson
         if model_type == 'gbm':
             initial = float(config.get('initial', 1.0))
