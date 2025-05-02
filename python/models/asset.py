@@ -51,16 +51,91 @@ def gbm_path(n_runs, config):
 
 # Stubs for additional asset models
 def garch(n_runs, config):
-    raise NotImplementedError("GARCH model not implemented yet")
+    """
+    Simulate GARCH(1,1) process on asset price paths.
+    Returns DataFrame of shape (n_runs, steps+1) and metrics on final values.
+    """
+    initial = float(config.get('initial', 1.0))
+    mu = float(config.get('mu', 0.0))
+    omega = float(config.get('omega', 0.1))
+    alpha = float(config.get('alpha', 0.1))
+    beta = float(config.get('beta', 0.8))
+    T = float(config.get('T', 1.0))
+    steps = int(config.get('steps', 100))
+    dt = T / steps
+    prices = np.zeros((n_runs, steps + 1))
+    prices[:, 0] = initial
+    # Initialize variance
+    var = np.full(n_runs, omega / (1 - alpha - beta))
+    for t in range(1, steps + 1):
+        # generate shocks
+        eps = np.random.randn(n_runs) * np.sqrt(var)
+        # update price via log returns
+        prices[:, t] = prices[:, t-1] * np.exp(mu * dt + eps * np.sqrt(dt))
+        # update variance
+        var = omega + alpha * eps**2 + beta * var
+    df = pd.DataFrame(prices, columns=[f"t{i}" for i in range(steps + 1)])
+    metrics = compute_metrics(prices[:, -1])
+    return df, metrics
 
 def arima(n_runs, config):
-    raise NotImplementedError("ARIMA model not implemented yet")
+    """
+    Simulate ARIMA(p,d,q) process (default p=1,d=0,q=1).
+    Returns DataFrame of shape (n_runs, steps+1) and metrics on final values.
+    """
+    p = int(config.get('p', 1))
+    d = int(config.get('d', 0))
+    q = int(config.get('q', 1))
+    T = float(config.get('T', 1.0))
+    steps = int(config.get('steps', 100))
+    dt = T / steps
+    paths = np.zeros((n_runs, steps + 1))
+    for i in range(n_runs):
+        eps = np.random.randn(steps)
+        series = np.zeros(steps + 1)
+        # ARMA part
+        for t in range(1, steps + 1):
+            ar = config.get('phi1', 0.5) * series[t - 1] if p >= 1 else 0
+            ma = config.get('theta1', 0.5) * eps[t - 1] if q >= 1 else 0
+            series[t] = ar + ma + eps[t - 1]
+        # Integration
+        if d > 0:
+            for _ in range(d):
+                series = np.cumsum(series)
+        paths[i, :] = series
+    df = pd.DataFrame(paths, columns=[f"t{i}" for i in range(steps + 1)])
+    metrics = compute_metrics(paths[:, -1])
+    return df, metrics
 
 def arma(n_runs, config):
-    raise NotImplementedError("ARMA model not implemented yet")
+    """
+    Simulate ARMA(p,q) process (default p=1, q=1).
+    Returns DataFrame of shape (n_runs, steps+1) and metrics on final values.
+    """
+    p = int(config.get('p', 1))
+    q = int(config.get('q', 1))
+    T = float(config.get('T', 1.0))
+    steps = int(config.get('steps', 100))
+    dt = T / steps
+    paths = np.zeros((n_runs, steps + 1))
+    for i in range(n_runs):
+        eps = np.random.randn(steps)
+        series = np.zeros(steps + 1)
+        for t in range(1, steps + 1):
+            ar = config.get('phi1', 0.5) * series[t - 1] if p >= 1 else 0
+            ma = config.get('theta1', 0.5) * eps[t - 1] if q >= 1 else 0
+            series[t] = ar + ma + eps[t - 1]
+        paths[i, :] = series
+    df = pd.DataFrame(paths, columns=[f"t{i}" for i in range(steps + 1)])
+    metrics = compute_metrics(paths[:, -1])
+    return df, metrics
 
 def sarimax(n_runs, config):
-    raise NotImplementedError("SARIMAX model not implemented yet")
+    """
+    Placeholder SARIMAX simulation; maps to ARIMA for now.
+    """
+    # For now, fallback to ARIMA simulation
+    return arima(n_runs, config)
 
 def jump_diffusion(n_runs, config):
     """
